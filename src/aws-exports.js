@@ -9,14 +9,12 @@ const awsmobile = {
     "oauth": {
         "domain": "exponent-dev001.auth.us-west-2.amazoncognito.com",
         "scope": [
-            "phone",
-            "email",
             "openid",
             "profile",
             "aws.cognito.signin.user.admin"
         ],
-        "redirectSignIn": "https://applion.netlify.app/",
-        "redirectSignOut": "https://applion.netlify.app/",
+        "redirectSignIn": "http://localhost:3000/",
+        "redirectSignOut": "http://localhost:3000/",
         "responseType": "code"
     }
 };

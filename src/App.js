@@ -132,6 +132,7 @@ export default function App() {
     setLoading(true);
     Auth.currentAuthenticatedUser()
       .then((currentUser) => {
+        console.log ('user is:', currentUser);
         setUser(currentUser);
         setLoading(false);
       })
