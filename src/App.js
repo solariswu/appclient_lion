@@ -18,6 +18,8 @@ import {
 
 Amplify.configure(awsconfig);
 
+const APP_NAME = 'Lion';
+
 async function globalSignOut() {
   try {
     await Auth.signOut();
@@ -65,7 +67,33 @@ const AuthButton = ({ user }) => {
 
 const DispContent = ({ loading, user }) => {
   if (loading) return <Spinner />;
-  return user ? <AuthedUser user={user} /> : <UnauthedUser />;
+
+  if (user) {
+    const userGroups = user.signInUserSession.accessToken.payload["cognito:groups"];
+
+    if (userGroups) {
+      const index = userGroups.findIndex(element => {
+        return element.toLowerCase() === APP_NAME.toLowerCase();
+      });
+
+      if (index !== -1) {
+        return (
+          <AuthedUser user={user} />
+        );
+      }
+    }
+
+    return (
+      <Box textAlign='center'>
+        <p>
+          <img alt='Oops!' src='https://www.pngitem.com/pimgs/m/253-2530285_oops-sticker-onomatopeya-hd-png-download.png' width='600' />
+        </p>
+        <p>You are not authorized to view this page</p>
+      </Box>
+    );
+
+  }
+  return <UnauthedUser />;
 };
 
 const DispHeader = ({ loading, user }) => {
@@ -132,7 +160,6 @@ export default function App() {
     setLoading(true);
     Auth.currentAuthenticatedUser()
       .then((currentUser) => {
-        console.log ('user is:', currentUser);
         setUser(currentUser);
         setLoading(false);
       })
