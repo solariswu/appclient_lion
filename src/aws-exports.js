@@ -13,8 +13,8 @@ const awsmobile = {
             "profile",
             "aws.cognito.signin.user.admin"
         ],
-        "redirectSignIn": "http://localhost:3000/",
-        "redirectSignOut": "http://localhost:3000/",
+        "redirectSignIn": "https://applion.netlify.app/",
+        "redirectSignOut": "https://applion.netlify.app/",
         "responseType": "code"
     }
 };
