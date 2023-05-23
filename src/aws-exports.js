@@ -4,8 +4,8 @@
 const awsmobile = {
     "aws_project_region": "us-west-2",
     "aws_cognito_region": "us-west-2",
-    "aws_user_pools_id": "us-west-2_bbcV4kd1J",
-    "aws_user_pools_web_client_id": "33hluq880gk17tfghngoole71n",
+    "aws_user_pools_id": "us-west-2_QBps3wDD4",
+    "aws_user_pools_web_client_id": "7haljjpgot4nh5cnafn6s42fvc",
     "oauth": {
         "domain": "exponent-dev001.auth.us-west-2.amazoncognito.com",
         "scope": [
