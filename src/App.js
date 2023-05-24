@@ -33,7 +33,7 @@ const UnauthedUser = () => {
   return (
     <Box textAlign='center'>
       <p>
-        <img alt='lion pic' src='https://c4.wallpaperflare.com/wallpaper/595/946/333/digital-art-white-lion-black-lion-wallpaper-preview.jpg' width='600' />
+        <img alt='lion pic' src='https://c4.wallpaperflare.com/wallpaper/595/946/333/digital-art-white-lion-black-lion-wallpaper-preview.jpg' width='50%' />
       </p>
       <p>Login in to see more</p>
       <Button onClick={() => Auth.federatedSignIn()}>
@@ -47,7 +47,7 @@ const AuthedUser = () => {
   return (
     <Box textAlign='center'>
       <p>
-        <img alt='lion' src='https://i.etsystatic.com/39641448/r/il/7921b5/4582322301/il_340x270.4582322301_btnp.jpg' width='600' />
+        <img alt='lion' src='https://i.etsystatic.com/39641448/r/il/7921b5/4582322301/il_340x270.4582322301_btnp.jpg' width='50%' />
       </p>
       <h2>
         {' '}
@@ -86,7 +86,7 @@ const DispContent = ({ loading, user }) => {
     return (
       <Box textAlign='center'>
         <p>
-          <img alt='Oops!' src='https://www.pngitem.com/pimgs/m/253-2530285_oops-sticker-onomatopeya-hd-png-download.png' width='600' />
+          <img alt='Oops!' src='https://www.pngitem.com/pimgs/m/253-2530285_oops-sticker-onomatopeya-hd-png-download.png' width='50%' />
         </p>
         <p>You are not authorized to view this page</p>
       </Box>
