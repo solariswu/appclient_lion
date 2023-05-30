@@ -98,7 +98,11 @@ const DispContent = ({ loading, user }) => {
 
 const DispHeader = ({ loading, user }) => {
   if (loading) return <p></p>;
-  return user ? <p>Hi, {user.username}</p> : <p>No User Signed In</p>;
+  let displayName = user.signInUserSession.idToken.payload.given_name;
+  if (!displayName && user.signInUserSession.idToken.payload.email) {
+    displayName = user.signInUserSession.idToken.payload.email;
+  }
+  return user ? <p>Hi, {displayName}</p> : <p>No User Signed In</p>;
 };
 
 const AppBody = ({ loading, user }) => {
