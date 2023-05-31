@@ -97,7 +97,7 @@ const DispContent = ({ loading, user }) => {
 };
 
 const DispHeader = ({ loading, user }) => {
-  if (loading) return <p></p>;
+  if (loading || !user || !(user.signInUserSession)) return <p></p>;
   let displayName = user.signInUserSession.idToken.payload.given_name;
   if (!displayName && user.signInUserSession.idToken.payload.email) {
     displayName = user.signInUserSession.idToken.payload.email;
