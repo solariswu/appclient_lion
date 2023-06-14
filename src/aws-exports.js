@@ -6,7 +6,6 @@ const awsmobile = {
     "aws_cognito_region": "us-west-2",
     "aws_user_pools_id": "us-west-2_QBps3wDD4",
     "aws_user_pools_web_client_id": "7haljjpgot4nh5cnafn6s42fvc",
-    "aws_cognito_identity_pool_id": "us-west-2:5f78e398-2dbd-4d5b-a341-bae179c1d84b",
     "oauth": {
         "domain": "exponent-dev001.auth.us-west-2.amazoncognito.com",
         "scope": [
@@ -17,10 +16,7 @@ const awsmobile = {
         "redirectSignIn": "https://applion.netlify.app/",
         "redirectSignOut": "https://applion.netlify.app/",
         "responseType": "code"
-    },
-    "aws_mandatory_sign_in" : false,
-    "aws_mobile_analytics_app_id": "ce12e0c609474a0da9af1b6664924846",
-    "aws_mobile_analytics_app_region": "us-west-2",
+    }
 };
 
 
