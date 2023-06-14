@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Amplify, Auth, Hub } from 'aws-amplify';
+import { Amplify, Analytics, Auth, Hub } from 'aws-amplify';
 import awsconfig from './aws-exports';
 
 import {
@@ -17,6 +17,7 @@ import {
 } from '@cloudscape-design/components';
 
 Amplify.configure(awsconfig);
+Analytics.enable();
 
 const APP_NAME = 'Lion';
 
